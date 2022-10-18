@@ -13,9 +13,9 @@ int LargestNumber(int n, ...)
 	// list pointer
 	va_start(ptr, n);
 
-	int max = va_start(ptr, n);
-
-	for (int i = 0; i < n-1; i++) {
+	//void max = va_start(ptr, n);
+	int max = 0;
+	for (int i = 0; i < n; i++) {
 
 		// Accessing current variable
 		// and pointing to next
@@ -35,14 +35,11 @@ int main()
 	printf("\n\n Variadic functions: \n");
 
 	// Variable number of arguments
-	printf("\n %d ",
-		LargestNumber(2, 1, 2));
+	printf("\n %d ", LargestNumber(2, 1, 2));
 
-	printf("\n %d ",
-		LargestNumber(3, 3, 4, 5));
+	printf("\n %d ", LargestNumber(3, 3, 4, 5));
 
-	printf("\n %d ",
-		LargestNumber(4, 6, 7, 8, 9));
+	printf("\n %d ", LargestNumber(4, 6, 7, 8, 9));
 
 	printf("\n");
 

@@ -10,20 +10,20 @@ int AddNumbers(int n, ...)
 
 	// Declaring pointer to the
 	// argument list
-	va_list ptr;
+	va_list b;
 
 	// Initializing argument to the
 	// list pointer
-	va_start(ptr, n);
+	va_start(b, n);
 
 	for (int i = 0; i < n; i++)
 
 		// Accessing current variable
 		// and pointing to next one
-		Sum += va_arg(ptr, int);
+		Sum += va_arg(b, int);
 
 	// Ending argument list traversal
-	va_end(ptr);
+	va_end(b);
 
 	return Sum;
 }
@@ -34,14 +34,11 @@ int main()
 	printf("\n\n Variadic functions: \n");
 
 	// Variable number of arguments
-	printf("\n 1 + 2 = %d ",
-		AddNumbers(2, 1, 2));
+	printf("\n 1 + 2 = %d ", AddNumbers(2, 1, 2));
 
-	printf("\n 3 + 4 + 5 = %d ",
-		AddNumbers(3, 3, 4, 5));
+	printf("\n 3 + 4 + 5 = %d ", AddNumbers(3, 3, 4, 5));
 
-	printf("\n 6 + 7 + 8 + 9 = %d ",
-		AddNumbers(4, 6, 7, 8, 9));
+	printf("\n 6 + 7 + 8 + 9 = %d ", AddNumbers(4, 6, 7, 8, 9));
 
 	printf("\n");
 
